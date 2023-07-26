@@ -13,8 +13,8 @@ package POM_demo;
 
 	public class LoginTest {
 		WebDriver driver;
-		//LoginPage lp;
-		LoginPage2 lp;
+		LoginPage lp;
+		//LoginPage2 lp;
 		
 		@BeforeClass
 		void setup() throws InterruptedException
@@ -22,22 +22,19 @@ package POM_demo;
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			
 			driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 			Thread.sleep(5000);
-			
 		}
 		
 		@Test(priority=1)
 		void testLogo()
 		{
-		//lp=new LoginPage(driver);
-			lp=new LoginPage2(driver);
+		lp=new LoginPage(driver);
+			//lp=new LoginPage2(driver);
 			
 			Assert.assertEquals(lp.checkLogoPresence(), true);
 		}
-		
-		
+			
 		@Test(priority=2)
 		void testLogin()
 		{

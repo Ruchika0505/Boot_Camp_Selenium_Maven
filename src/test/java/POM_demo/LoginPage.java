@@ -13,10 +13,9 @@ package POM_demo;
 			this.driver=driver;
 		}
 		
-		// locators
-		
-		
-		By img_logo_loc=By.xpath("//img[@alt='company-branding']");
+		// locator
+
+		By img_logo_loc = By.xpath("//img[@alt='company-branding']");
 		By txt_username_loc=By.name("username");
 		By txt_password_loc=By.cssSelector("input[placeholder='Password']");
 		By btn_submit_loc=By.xpath("//button[normalize-space()='Login']");

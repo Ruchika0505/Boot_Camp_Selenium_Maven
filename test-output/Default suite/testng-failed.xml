@@ -6,8 +6,8 @@
       <class name="POM_demo.LoginTest">
         <methods>
           <include name="testLogo"/>
-          <include name="setup"/>
           <include name="testLogin"/>
+          <include name="setup"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- POM_demo.LoginTest -->
